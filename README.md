@@ -1,31 +1,34 @@
-# Big Road
+# ME in JOUR2106
 
-The simplist's solution to a mobile-only web story.
+This is a brief introduction.
 
-## Getting started
+## Me?!
 
-- Fork this repository
-- Modify `index.html` to include your content
-- Your web story is available on `username.github.io/big-road`
+I am SUN HAN YUE (Annie) and I am a year one student from Faculty of Arts. 
 
-## Pre-requisite
+- **My interests** --Photography (not professional), Music, Literature, Film, Cats, Spiderman (Spiders are also ok), Cutting my hair by myself... 
+- **Me&TheCourse** --I have to admit that my knowledge of analysing data is poor but I am interested in the area of Journalism. I want to access more knowledge about data and I am willing to spend much time on projects in this course(I'm quite looking forward for it!!). 
 
-Only one: HTML.
+![](SUN08042HanYue.github.io/images/Cg-4WlWI0dGIbiyEAAIxyAQA6pQAAF1mAHKJKcAAjHg239.jpg )
 
-You don't need to actually learn it. Just fork the repository, edit the `index.html` file and observe what is changed on the page. Our experience shows that people with no background can make a web story in this way, within 3 hours, someone in 30 minutes.
+## About Topics
 
-## Next steps
+Here are several areas I'd like to explore:
 
-- You can modify the repo name in the settings
-- You can buy a domain and add a `CNAME` in this project, to serve your webstory from a [customized domain](https://github.com/hupili/python-for-data-and-media-communication-gitbook/blob/master/notes-week-00.md#bonus-bind-a-custom-domain-name).
+- The virtual world on the Internet vs. reality
+- Information garbage
+- Peripheral Vocation
+- None of them above:D
 
-## What does "Big Road" mean?
+## I enjoy ___ team
 
-In Chinese, people say **大道至简**. HTML was born a declarative and easy-to-learn language. Its output, a "web page", was originally highly adaptive -- basically the user browser can determine how to present the information. Authors can focus on their content, instead of the format. However, the 20 years or so development of web change the situation completely, making web technology a pain for new learners. Even experienced developers find it hard to follow the latest trend. Fortunately, with the widespread of mobile device, we are back to the early years of web -- simple, and one solution for all.
+- Creative
+- Active
+- Relax
+- Responsible
 
-## Sample projects
+## The last thing I want to say
 
-- [Reporting Style of SCMP](https://warrior960812.github.io/Has-Alibaba-changed-the-South-China-Morning-Post-/)
-- [Analysis of People's daily](https://lullabymia.github.io/big-road/)
-- [Insights from AppStore](https://catmint1215.github.io/)
-- [Communication Job Market](https://zhangningnina.github.io/big-road/)
+It's so nice to meet you guys! Have a happy new lunar year:) 
+
+![](SUN08042HanYue.github.io/images/51biz_igGFeOVo.jpg )
