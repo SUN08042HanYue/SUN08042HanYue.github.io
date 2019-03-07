@@ -205,27 +205,6 @@
                 grid-template-columns: 1fr 1fr 1fr;
             }
         }
-        
-        .slogan1 {
-            font-size: 30px;
-            font-family: monospace;
-            background: white font-style: oblique;
-            font-weight: bold;
-            padding: 30px 30px;
-            border-radius: 5px;
-            border: rgb(3, 3, 3) 1px solid;
-        }
-        
-        .slogan2 {
-            font-size: 30px;
-            font-family: monospace;
-            background: white;
-            font-style: oblique;
-            font-weight: bold;
-            padding: 30px 30px;
-            border-radius: 5px;
-            border: rgb(3, 3, 3) 1px solid;
-        }
     </style>
 
     <h2>Events I participated in and I want to participate in</h2>
@@ -250,7 +229,45 @@
             <img width="300" alt="cloud" src="hw1//images/草图 (13)_LI.jpg">
         </div>
     </div>
-
+    <style>
+        .slogan1 {
+            font-size: 30px;
+            font-family: monospace;
+            background: black;
+            font-style: oblique;
+            font-weight: bold;
+            padding: 30px 30px;
+            border-radius: 5px;
+        }
+        
+        .slogan2 {
+            font-size: 30px;
+            font-family: monospace;
+            background: black;
+            font-style: oblique;
+            font-weight: bold;
+            padding: 30px 30px;
+            border-radius: 5px;
+        }
+        
+        .ul {
+            color: white
+        }
+        
+        @media (min-width:400px) {
+            .container {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (min-width:700px) {
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
     <h2>What I can do</h2>
     <button id="nowBtn" class="btn btn-secondary" onclick="myFunction1()">My Skills</button>
 
