@@ -234,25 +234,27 @@
         #slogan1 {
             font-size: 30px;
             font-family: monospace;
-            background: black;
+            background: white;
             font-style: oblique;
             font-weight: bold;
             padding: 30px 30px;
             border-radius: 5px;
+            border: black;
         }
         
         #slogan2 {
             font-size: 30px;
             font-family: monospace;
-            background: black;
+            background: white;
             font-style: oblique;
             font-weight: bold;
             padding: 30px 30px;
             border-radius: 5px;
+            border: black;
         }
         
         ul {
-            color: white
+            color: black;
         }
         
         * {
@@ -261,38 +263,6 @@
         
         div {
             display: block;
-        }
-        
-        @media (min-width: 600px) {
-            #begin {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto;
-                grid-template-areas: /* prettier-ignore */
-                "s1 s2"
-            }
-            #slogan1 {
-                grid-area: s1;
-            }
-            #slogan2 {
-                grid-area: s2;
-            }
-        }
-        
-        @media (min-width: 800px) {
-            #begin {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto;
-                grid-template-areas: /* prettier-ignore */
-                "s2 s1"
-            }
-            #slogan1 {
-                grid-area: s1;
-            }
-            #slogan2 {
-                grid-area: s2;
-            }
         }
     </style>
 
