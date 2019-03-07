@@ -263,17 +263,35 @@
             display: block;
         }
         
-        @media (min-width:400px) {
-            .slogan1.slogan2 {
+        @media (min-width: 600px) {
+            #begin {
                 display: grid;
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+                grid-template-areas: /* prettier-ignore */
+                "s1 s2"
+            }
+            #slogan1 {
+                grid-area: s1;
+            }
+            #slogan2 {
+                grid-area: s2;
             }
         }
         
-        @media (min-width:700px) {
-            .slogan1.slogan2 {
+        @media (min-width: 800px) {
+            #begin {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+                grid-template-areas: /* prettier-ignore */
+                "s2 s1"
+            }
+            #slogan1 {
+                grid-area: s1;
+            }
+            #slogan2 {
+                grid-area: s2;
             }
         }
     </style>
