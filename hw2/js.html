@@ -18,15 +18,15 @@
         // b = document.getElementById("num2").value
         // result = (+a) + (+b)
 
-        function calculate() {
-            a = +document.getElementsById("num1").value
-            b = +document.getElementsById("num2").value
+        function calculatea() {
+            a = +document.getElementById("num1").value
+            b = +document.getElementById("num2").value
             result = (a) + (b)
 
             document.gteElementById("result").value = result
         }
 
-        document.getElementById("calculate").addEventListener('click', calculate)
+        document.getElementById("calculate").addEventListener('click', calculatea)
         document.getElementById("num1").addEventListener('change', calculate)
         document.getElementById("num1").addEventListener('keyup', calculate)
         document.getElementById("num2").addEventListener('change', calculate)
