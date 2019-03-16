@@ -3,15 +3,27 @@
 </head>
 
 <body>
-    <h1>Exercise JS</h1>
+    <h1>Calculator</h1>
     <p>This is a paragraph.</p>
+    <input id="num1" type="number" value="100">
+    <input id="num2" type="number" value="200">
+    <input id="result" type="number">
 
     <script>
-        a = 1
-        b = 2
-        a + b
-        console.log('log message')
-        console.log(a + b)
+        // a = document.getElementById("num1").value
+        // b = document.getElementById("num2").value
+        // result = (+a) + (+b)
+
+        a = +document.getElementsById("num1").value
+        b = +document.getElementsById("num2").value
+        result = (a) + (b)
+
+        document.gteElementById("result").value = result
+
+        //result = Math.pow(a, b)
+        // console.log('result:')
+        // console.log(result)
     </script>
+
 
 </body>
