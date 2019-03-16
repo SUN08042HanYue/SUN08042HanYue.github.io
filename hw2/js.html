@@ -5,8 +5,12 @@
 <body>
     <h1>Calculator</h1>
     <p>This is a paragraph.</p>
-    <input id="num1" type="number" value="100">
-    <input id="num2" type="number" value="200">
+    Num1:
+    <input id="num1" type="number" value="300">Num2:
+    <input id="num2" type="number" value="50">
+    <br>
+    <button id="cal">Calculate</button>
+    <br> Result:
     <input id="result" type="number">
 
     <script>
@@ -14,11 +18,15 @@
         // b = document.getElementById("num2").value
         // result = (+a) + (+b)
 
-        a = +document.getElementsById("num1").value
-        b = +document.getElementsById("num2").value
-        result = (a) + (b)
+        function Calculate() {
+            a = +document.getElementsById("num1").value
+            b = +document.getElementsById("num2").value
+            result = (a) + (b)
 
-        document.gteElementById("result").value = result
+            document.gteElementById("result").value = result
+        }
+
+        document.getElementById("cal").addEventListener('click', Calculate)
 
         //result = Math.pow(a, b)
         // console.log('result:')
