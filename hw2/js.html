@@ -9,7 +9,7 @@
     <input id="num1" type="number" value="300">Num2:
     <input id="num2" type="number" value="50">
     <br>
-    <button id="cal">Calculate</button>
+    <button id="Calculate">Calculate</button>
     <br> Result:
     <input id="result" type="number">
 
@@ -26,7 +26,7 @@
             document.gteElementById("result").value = result
         }
 
-        document.getElementById("cal").addEventListener('click', calculate)
+        document.getElementById("Calculate").addEventListener('click', calculate)
         document.getElementById("num1").addEventListener('change', calculate)
         document.getElementById("num1").addEventListener('keyup', calculate)
         document.getElementById("num2").addEventListener('change', calculate)
