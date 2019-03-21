@@ -3,39 +3,123 @@
 </head>
 
 <body>
-    <h1>Calculator</h1>
-    <p>This is a paragraph.</p>
-    Num1:
-    <input id="num1" type="number" value="300">Num2:
-    <input id="num2" type="number" value="50">
-    <br>
-    <button id="calculate">Calculate</button>
-    <br> Result:
-    <input id="result" type="number">
 
-    <script>
-        // a = document.getElementById("num1").value
-        // b = document.getElementById("num2").value
-        // result = (+a) + (+b)
-
-        function calculatea() {
-            a = +document.getElementById("num1").value
-            b = +document.getElementById("num2").value
-            result = (a) + (b)
-
-            document.gteElementById("result").value = result
+    <style>
+        .container {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            min-width: 320px;
+            box-sizing: inherit;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 16px;
+            line-height: 2em;
         }
+    </style>
 
-        document.getElementById("calculate").addEventListener('click', calculatea)
-        document.getElementById("num1").addEventListener('change', calculate)
-        document.getElementById("num1").addEventListener('keyup', calculate)
-        document.getElementById("num2").addEventListener('change', calculate)
-        document.getElementById("num2").addEventListener('keyup', calculate)
+    <div class="container">
 
-        //result = Math.pow(a, b)
-        // console.log('result:')
-        // console.log(result)
-    </script>
+        <h1>Formula for calculating hereditary height</h1>
+        <p>
+            <ul>
+                <li><strong>Male</strong></li>
+            </ul>
+        </p>
+        <div class="ui form">
+            <div class="1st three fields">
+                <div class="ui right labeled input">
+                    Father:
+                    <input id="num1" type="number" value="170">cm
+                </div>
+                <div class="ui right labeled input">
+                    Mother:
+                    <input id="num2" type="number" value="160">cm
+                </div>
+                <div class="ui right labeled input">
+                </div>
+            </div>
+            <br>
+            <button id="calculate1">Calculate</button>
+            <br> You:
+            <input id="result1" type="number">cm
+        </div>
 
+        <p>
+            <ul>
+                <li><strong>Female</strong></li>
+            </ul>
+        </p>
+        <div class="ui form">
+            <div class="2nd three fields">
+                <div class="ui right labeled input">
+                    Father:
+                    <input id="num3" type="number" value="170">cm
+                </div>
+                <div class="ui right labeled input">
+                    Mother:
+                    <input id="num4" type="number" value="160">cm
+                </div>
+                <div class="ui right labeled input">
+                </div>
+            </div>
+            <br>
+            <button id="calculate2">Calculate</button>
+            <br> You:
+            <input id="result2" type="number">cm
+        </div>
+
+
+
+        <script>
+            // a = document.getElementById("num1").value
+            // b = document.getElementById("num2").value
+            // result1 = ( (+a) + (+b) + 13 ) / 2
+
+            function calculate() {
+                a = +document.getElementById("num1").value
+                b = +document.getElementById("num2").value
+                result = ((a) + (b) + 13) / 2
+
+                document.getElementById("result1").value = result
+            }
+
+            document.getElementById("calculate1").addEventListener('click', calculate)
+            document.getElementById("num1").addEventListener('change', calculate)
+            document.getElementById("num1").addEventListener('keyup', calculate)
+            document.getElementById("num2").addEventListener('change', calculate)
+            document.getElementById("num2").addEventListener('keyup', calculate)
+
+
+            //result1 = Math.pow(a, b)
+            // console.log('result:')
+            // console.log(result)
+        </script>
+
+        <script>
+            // a = document.getElementById("num3").value
+            // b = document.getElementById("num4").value
+            // result2 = ( (+a) + (+b) - 13 ) / 2
+
+            function calculate() {
+                a = +document.getElementById("num3").value
+                b = +document.getElementById("num4").value
+                result = ((a) + (b) - 13) / 2
+
+                document.getElementById("result2").value = result
+            }
+
+            document.getElementById("calculate2").addEventListener('click', calculate)
+            document.getElementById("num3").addEventListener('change', calculate)
+            document.getElementById("num3").addEventListener('keyup', calculate)
+            document.getElementById("num4").addEventListener('change', calculate)
+            document.getElementById("num4").addEventListener('keyup', calculate)
+
+
+            //result2 = Math.pow(a, b)
+            // console.log('result:')
+            // console.log(result)
+        </script>
+
+    </div>
 
 </body>
