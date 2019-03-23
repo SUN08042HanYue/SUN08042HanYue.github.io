@@ -1,3 +1,123 @@
-<h1>HW2 demo in class</h1>
+<head>
 
-<a href="../../hw1">point to hw1</a>
+</head>
+
+<body>
+
+    <style>
+        .container {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            min-width: 320px;
+            box-sizing: inherit;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 16px;
+            line-height: 2em;
+            text-align: center;
+        }
+    </style>
+
+    <div class="container">
+
+        <h1>Calculating hereditary height</h1>
+        <p>Want to know what height your children will get? Here is a platform for you to calculate it. It is based on some formula which are discovered by scientists and it may have error around 3cm.</p>
+        <p>
+            <strong>Male</strong>
+        </p>
+        <div class="ui form">
+            <div class="1st three fields">
+                <div class="ui right labeled input">
+                    Father:
+                    <input id="num1" type="number" value="170">cm
+                </div>
+                <div class="ui right labeled input">
+                    Mother:
+                    <input id="num2" type="number" value="160">cm
+                </div>
+                <div class="ui right labeled input">
+                </div>
+            </div>
+            <br>
+            <button id="calculate1">Calculate</button>
+            <br> You:
+            <input id="result1" type="number">cm
+        </div>
+
+        <p>
+            <strong>Female</strong>
+        </p>
+        <div class="ui form">
+            <div class="2nd three fields">
+                <div class="ui right labeled input">
+                    Father:
+                    <input id="num3" type="number" value="170">cm
+                </div>
+                <div class="ui right labeled input">
+                    Mother:
+                    <input id="num4" type="number" value="160">cm
+                </div>
+                <div class="ui right labeled input">
+                </div>
+            </div>
+            <br>
+            <button id="calculate2">Calculate</button>
+            <br> You:
+            <input id="result2" type="number">cm
+        </div>
+
+
+
+        <script>
+            // a = document.getElementById("num1").value
+            // b = document.getElementById("num2").value
+            // result1 = ( (+a) + (+b) + 13 ) / 2
+
+            function calculate() {
+                a = +document.getElementById("num1").value
+                b = +document.getElementById("num2").value
+                result = ((a) + (b) + 13) / 2
+
+                document.getElementById("result1").value = result
+            }
+
+            document.getElementById("calculate1").addEventListener('click', calculate)
+            document.getElementById("num1").addEventListener('change', calculate)
+            document.getElementById("num1").addEventListener('keyup', calculate)
+            document.getElementById("num2").addEventListener('change', calculate)
+            document.getElementById("num2").addEventListener('keyup', calculate)
+
+
+            //result1 = Math.pow(a, b)
+            // console.log('result:')
+            // console.log(result)
+        </script>
+
+        <script>
+            // a = document.getElementById("num3").value
+            // b = document.getElementById("num4").value
+            // result2 = ( (+a) + (+b) - 13 ) / 2
+
+            function calculate() {
+                a = +document.getElementById("num3").value
+                b = +document.getElementById("num4").value
+                result = ((a) + (b) - 13) / 2
+
+                document.getElementById("result2").value = result
+            }
+
+            document.getElementById("calculate2").addEventListener('click', calculate)
+            document.getElementById("num3").addEventListener('change', calculate)
+            document.getElementById("num3").addEventListener('keyup', calculate)
+            document.getElementById("num4").addEventListener('change', calculate)
+            document.getElementById("num4").addEventListener('keyup', calculate)
+
+
+            //result2 = Math.pow(a, b)
+            // console.log('result:')
+            // console.log(result)
+        </script>
+
+    </div>
+
+</body>
