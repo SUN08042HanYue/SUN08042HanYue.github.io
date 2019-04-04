@@ -80,94 +80,12 @@
             <ul>
                 <li>Add more colors in the chart.</li>
                 <li>Turn the pie chart into the column-negative chart which has the distinction of positive and negative data and do not worry about the total percentage.</li>
+                <img width="800" src="images/屏幕截图(109).png">
             </ul>
         </ol>
 
     </p>
 
-</body>
-
-</html>
-<html>
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Highcharts Example</title>
-
-    <style type="text/css">
-
-    </style>
-</head>
-
-<body>
-    <script src="../../code/highcharts.js"></script>
-    <script src="../../code/modules/exporting.js"></script>
-    <script src="../../code/modules/export-data.js"></script>
-
-    <div id="container" style="min-width: 310px; height: 800px; margin: 0 auto"></div>
-
-
-
-    <script type="text/javascript">
-        Highcharts.chart('container', {
-            chart: {
-                type: 'column'
-            },
-            title: {
-                text: 'Counties With Differences in Number of Jobs from 2011 to 2015'
-            },
-            xAxis: [{
-                title: {
-                    text: 'Differents Cities'
-                },
-
-                categories: ['Elko', 'Douglas', 'Clark', 'Carson City', 'Mineral', 'White Pine', 'Churchill', 'Lyon', 'Nye', 'Humboldt', 'Washoe']
-            }],
-            yAxis: [{
-                title: {
-                    text: 'Job Growth Rate(%)'
-                },
-            }],
-            credits: {
-                enabled: false
-            },
-            series: [{
-                name: 'Elko',
-                data: [76]
-            }, {
-                name: 'Douglas',
-                data: [23]
-            }, {
-                name: 'Clark',
-                data: [14]
-            }, {
-                name: 'Carson City',
-                data: [4]
-            }, {
-                name: 'Mineral',
-                data: [4]
-            }, {
-                name: 'White Pine',
-                data: [1]
-            }, {
-                name: 'Churchill',
-                data: [-2]
-            }, {
-                name: 'Lyon',
-                data: [-2]
-            }, {
-                name: 'Nye',
-                data: [-2]
-            }, {
-                name: 'Humboldt',
-                data: [-4]
-            }, {
-                name: 'Washoe',
-                data: [-12]
-            }, ]
-        });
-    </script>
 </body>
 
 </html>
