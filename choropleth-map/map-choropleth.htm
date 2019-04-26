@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Highmaps Example</title>
+
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="Highmaps-7.0.3/code/highmaps.js"></script>
+    <script src="Highmaps-7.0.3/code/modules/data.js"></script>
+    <script src="Highmaps-7.0.3/code/modules/exporting.js"></script>
+    <script src="Highmaps-7.0.3/code/modules/offline-exporting.js"></script>
+    <!-- <script src="../../code/mapdata/custom/world.js"></script> -->
+    <!-- <script src="http://code.highcharts.com/mapdata/custom/world.js"></script> -->
+    <script src="world.js"></script>
+
+
+    <div id="container" style="height: 500px; min-width: 310px; max-width: 800px; margin: 0 auto"></div>
+
+    <script type="text/javascript">
+        // Prepare random data
+        var data = [
+            ['Central & Western', 117203],
+            ['Wan Chai(1)', 86413],
+            ['Eastern(1)', 263513],
+            ['Southern', 122577],
+            ['Yau Tsim Mong', 166652],
+            ['Sham Shui Po', 191624],
+            ['Kowloon City', 191947],
+            ['Wong Tai Sin', 199949],
+            ['Kwun Tong', 299636],
+            ['Kwai Tsing', 246914],
+            ['Tsuen Wan', 154639],
+            ['Tuen Mun', 232879],
+            ['Yuen Long', 280434],
+            ['North', 142096],
+            ['Tai Po', 139363],
+            ['Sha Tin', 305878],
+            ['Sai Kung', 220720],
+            ['Islands', 71811],
+            ['Land', 3434248]
+        ];
+
+        $.getJSON('dc_land.lowres.geo.json', function(geojson) {
+
+            // Initiate the chart
+            Highcharts.mapChart('container', {
+                chart: {
+                    map: geojson
+                },
+
+                title: {
+                    text: 'GeoJSON in Highmaps'
+                },
+
+                mapNavigation: {
+                    enabled: true,
+                    buttonOptions: {
+                        verticalAlign: 'bottom'
+                    }
+                },
+
+                colorAxis: {
+                    tickPixelInterval: 100
+                },
+
+                series: [{
+                    data: data,
+                    keys: ['DC_ENG', 'value'],
+                    joinBy: 'DC_ENG',
+                    name: 'Working populatiom',
+                    states: {
+                        hover: {
+                            color: '#a4edba'
+                        }
+                    },
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.properties.postal}'
+                    }
+                }]
+            });
+        });
+    </script>
+</body>
+
+</html>

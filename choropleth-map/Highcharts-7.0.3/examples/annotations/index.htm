@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Highcharts Example</title>
+
+    <style type="text/css">
+        #container {
+            max-width: 800px;
+            min-width: 320px;
+            height: 400px;
+            margin: 1em auto;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../../code/highcharts.js"></script>.
+    <script src="../../code/modules/annotations.js"></script>
+    <script src="../../code/modules/exporting.js"></script>
+    <script src="../../code/modules/export-data.js"></script>
+
+    <div id="container" style="height: 400px; min-width: 380px"></div>
+
+
+    <script type="text/javascript">
+        // Data generated from http://www.bikeforums.net/professional-cycling-fans/1113087-2017-tour-de-france-gpx-tcx-files.html
+        var elevationData = [
+            [1, 5],
+            [2, 6],
+            [3, 7],
+            [4, 1]
+        ];
+
+        // Now create the chart
+        Highcharts.chart('container', {
+
+            chart: {
+                type: 'area',
+                zoomType: 'x',
+                panning: true,
+                panKey: 'shift',
+                scrollablePlotArea: {
+                    minWidth: 600
+                }
+            },
+
+            title: {
+                text: '2017 Tour de France Stage 8: Dole - Station des Rousses'
+            },
+
+            subtitle: {
+                text: 'An annotated chart in Highcharts'
+            },
+
+            annotations: [{
+                labelOptions: {
+                    backgroundColor: 'rgba(255,255,255,0.5)',
+                    verticalAlign: 'top',
+                    y: 15
+                },
+                labels: [{
+                    point: {
+                        xAxis: 0,
+                        yAxis: 0,
+                        x: 100,
+                        y: 1500
+                    },
+                    text: 'test label'
+                }]
+            }],
+
+            xAxis: {
+                labels: {
+                    format: '{value} km'
+                },
+                minRange: 5,
+                title: {
+                    text: 'Distance'
+                }
+            },
+
+            yAxis: {
+                startOnTick: true,
+                endOnTick: false,
+                maxPadding: 0.35,
+                title: {
+                    text: null
+                },
+                labels: {
+                    format: '{value} m'
+                }
+            },
+
+            tooltip: {
+                headerFormat: 'Distance: {point.x:.1f} km<br>',
+                pointFormat: '{point.y} m a. s. l.',
+                shared: true
+            },
+
+            legend: {
+                enabled: false
+            },
+
+            series: [{
+                data: elevationData,
+                lineColor: Highcharts.getOptions().colors[1],
+                color: Highcharts.getOptions().colors[2],
+                fillOpacity: 0.5,
+                name: 'Elevation',
+                marker: {
+                    enabled: false
+                },
+                threshold: null
+            }]
+
+        });
+    </script>
+</body>
+
+</html>
