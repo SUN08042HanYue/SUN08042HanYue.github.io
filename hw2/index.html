@@ -1,123 +1,334 @@
+<html>
+
 <head>
 
+    <title>SUN Han Yue's online cv</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Highcharts-7.0.3/code/highcharts.js"></script>
+    <script src="Highcharts-7.0.3/code/modules/exporting.js"></script>
+    <script src="Highcharts-7.0.3/code/modules/export-data.js"></script>
 </head>
 
+<style>
+    body {
+        font-size: 24px;
+    }
+    
+    h1 {
+        color: rgb(255, 255, 255);
+        font-size: 2em;
+    }
+    
+    h2 {
+        text-align: center;
+    }
+    
+    h1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        margin: 0;
+        text-align: center;
+        padding: 0.5em;
+    }
+    
+    h3 {
+        text-align: center
+    }
+    
+    h4 {
+        text-align: center;
+        font-size: 1em;
+    }
+    
+    #space {
+        margin: 5em;
+    }
+</style>
+
 <body>
+    <h1>SSSHKM's demo portfolio</h1>
+
+    <h1 class="animated jello">SSSHKM's demo portfolio</h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+    <div id="space"></div>
+
+    <h2>Me</h2>
+
+    <div id="chart">Chart will show here.</div>
+
+    <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+
+
+    <script type="text/javascript">
+        Highcharts.chart('container', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Browser market shares in January, 2018'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Brands',
+                colorByPoint: true,
+                data: [{
+                    name: 'Chrome',
+                    y: 61.41,
+                    sliced: true,
+                    selected: true
+                }, {
+                    name: 'Internet Explorer',
+                    y: 11.84
+                }, {
+                    name: 'Firefox',
+                    y: 10.85
+                }, {
+                    name: 'Edge',
+                    y: 4.67
+                }, {
+                    name: 'Safari',
+                    y: 4.18
+                }, {
+                    name: 'Sogou Explorer',
+                    y: 1.64
+                }, {
+                    name: 'Opera',
+                    y: 1.6
+                }, {
+                    name: 'QQ',
+                    y: 1.2
+                }, {
+                    name: 'Other',
+                    y: 2.61
+                }]
+            }]
+        });
+    </script>
 
     <style>
-        .container {
-            max-width: 600px;
+        .headshot {
+            background-color: rgb(252, 253, 253);
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
             margin-left: auto;
             margin-right: auto;
-            min-width: 320px;
-            box-sizing: inherit;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            font-size: 16px;
-            line-height: 2em;
-            text-align: center;
+        }
+        
+        .profile1,
+        .profile2 {
+            background-color: rgb(255, 255, 255);
+            border: rgb(3, 3, 3) 1px solid;
+            margin: 2px;
+        }
+        
+        @media (min-width: 600px) {
+            #begin {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                grid-template-rows: auto;
+                grid-template-areas: /* prettier-ignore */
+                "hs p1"
+                /* prettier-ignore */
+                "hs p2";
+            }
+            .headshot {
+                grid-area: hs;
+            }
+            .profile1 {
+                grid-area: p1;
+            }
+            .profile2 {
+                grid-area: p2;
+            }
+        }
+        
+        @media (min-width: 800px) {
+            #begin {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: auto;
+                grid-template-areas: /* prettier-ignore */
+                "p1 hs p2"
+            }
+            .headshot {
+                grid-area: hs;
+            }
+            .profile1 {
+                grid-area: p1;
+            }
+            .profile2 {
+                grid-area: p2;
+            }
         }
     </style>
 
-    <div class="container">
+    <div id="begin">
 
-        <h1>Calculating hereditary height</h1>
-        <p>Want to know what height your children will get? Here is a platform for you to calculate it. It is based on some formula which are discovered by scientists and it may have error around 3cm.</p>
-        <p>
-            <strong>Male</strong>
-        </p>
-        <div class="ui form">
-            <div class="1st three fields">
-                <div class="ui right labeled input">
-                    Father:
-                    <input id="num1" type="number" value="170">cm
-                </div>
-                <div class="ui right labeled input">
-                    Mother:
-                    <input id="num2" type="number" value="160">cm
-                </div>
-                <div class="ui right labeled input">
-                </div>
-            </div>
-            <br>
-            <button id="calculate1">Calculate</button>
-            <br> You:
-            <input id="result1" type="number">cm
+        <div class="col-sm-12 col-md- col-lg-6" id="topImg">
+            <img width="300" alt="cloud" src="hw1//images/草图 (8).png">
         </div>
-
-        <p>
-            <strong>Female</strong>
-        </p>
-        <div class="ui form">
-            <div class="2nd three fields">
-                <div class="ui right labeled input">
-                    Father:
-                    <input id="num3" type="number" value="170">cm
-                </div>
-                <div class="ui right labeled input">
-                    Mother:
-                    <input id="num4" type="number" value="160">cm
-                </div>
-                <div class="ui right labeled input">
-                </div>
-            </div>
-            <br>
-            <button id="calculate2">Calculate</button>
-            <br> You:
-            <input id="result2" type="number">cm
+        <div class="profile1">
+            <h1>SUN Han Yue, Annie</h1>
+            <h2>
+                <i>Bachelor of Arts</i>
+            </h2>
+            <h4>Year 1</h4>
+            <ul>
+                <li>Short in hair</li>
+                <li>Short in height</li>
+                <li>Wearing glasses</li>
+            </ul>
         </div>
-
-
-
-        <script>
-            // a = document.getElementById("num1").value
-            // b = document.getElementById("num2").value
-            // result1 = ( (+a) + (+b) + 13 ) / 2
-
-            function calculate() {
-                a = +document.getElementById("num1").value
-                b = +document.getElementById("num2").value
-                result = ((a) + (b) + 13) / 2
-
-                document.getElementById("result1").value = result
-            }
-
-            document.getElementById("calculate1").addEventListener('click', calculate)
-            document.getElementById("num1").addEventListener('change', calculate)
-            document.getElementById("num1").addEventListener('keyup', calculate)
-            document.getElementById("num2").addEventListener('change', calculate)
-            document.getElementById("num2").addEventListener('keyup', calculate)
-
-
-            //result1 = Math.pow(a, b)
-            // console.log('result:')
-            // console.log(result)
-        </script>
-
-        <script>
-            // a = document.getElementById("num3").value
-            // b = document.getElementById("num4").value
-            // result2 = ( (+a) + (+b) - 13 ) / 2
-
-            function calculate() {
-                a = +document.getElementById("num3").value
-                b = +document.getElementById("num4").value
-                result = ((a) + (b) - 13) / 2
-
-                document.getElementById("result2").value = result
-            }
-
-            document.getElementById("calculate2").addEventListener('click', calculate)
-            document.getElementById("num3").addEventListener('change', calculate)
-            document.getElementById("num3").addEventListener('keyup', calculate)
-            document.getElementById("num4").addEventListener('change', calculate)
-            document.getElementById("num4").addEventListener('keyup', calculate)
-
-
-            //result2 = Math.pow(a, b)
-            // console.log('result:')
-            // console.log(result)
-        </script>
+        <div class="profile2">
+            <h2>Hobby</h2>
+            <p>
+                <ul>
+                    <li>Photography (not professional), Photoshop;</li>
+                    <li>Music, Literature, Film;</li>
+                    <li>Cats, Spiderman (Spiders are also ok);</li>
+                    <li>Cutting my hair by myself...</li>
+                </ul>
+            </p>
+        </div>
 
     </div>
 
+
+
+
+    <div class="col-6" id="profile">
+
+        <h2>My Learning Experience</h2>
+        <table width="100%">
+            <tbody>
+                <tr>
+                    <th>Year</th>
+                    <th>School</th>
+                    <th>Course</th>
+                </tr>
+                <tr>
+                    <th>2006-2012</th>
+                    <th>The second affiliated primary school of the first normal college of Hunan</th>
+                    <th>Primary school curriculum</th>
+                </tr>
+                <tr>
+                    <th>2012-2015</th>
+                    <th>Nanya Middle School</th>
+                    <th>Junior high school curriculum</th>
+                </tr>
+                <tr>
+                    <th>2015-2018</th>
+                    <th>Yali Middle School</th>
+                    <th>Senior high school curriculum</th>
+                </tr>
+                <tr>
+                    <th>2018-now</th>
+                    <th>Hong Kong Baptist University</th>
+                    <th>Faculty of Arts</th>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <style>
+        .photo {
+            min-width: 100px;
+            min-height: 200px;
+            background-color: rgb(253, 253, 253);
+            border: rgb(3, 3, 3) 1px solid;
+            margin: 5px;
+        }
+        
+        @media (min-width:400px) {
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (min-width:700px) {
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+    </style>
+
+    <h2>Events I participated in and I want to participate in</h2>
+
+    <div class="container">
+        <div class="photo">
+            <img width="300" alt="cloud" src="hw1//images/草图 (9)_LI.jpg">
+        </div>
+        <div class="photo">
+            <img width="300" alt="cloud" src="hw1//images/草图 (10)_LI.jpg">
+        </div>
+        <div class="photo">
+            <img width="300" alt="cloud" src="hw1//images/草图 (15)_LI.jpg">
+        </div>
+        <div class="photo">
+            <img width="300" alt="cloud" src="hw1//images/草图 (11)_LI.jpg">
+        </div>
+        <div class="photo">
+            <img width="300" alt="cloud" src="hw1//images/草图 (12)_LI.jpg">
+        </div>
+        <div class="photo">
+            <img width="300" alt="cloud" src="hw1//images/草图 (13)_LI.jpg">
+        </div>
+    </div>
+
+
+
+    <h2>What I can do</h2>
+
+    <h3>My Skills</h3>
+
+    <button id="nowBtn" class="btn btn-secondary" onclick="myFunction1()">Microsoft Word/Excel/Powerpoint</button>
+    <button id="nowBtn" class="btn btn-secondary" onclick="myFunction1()">Photoshop</button>
+    <button id="nowBtn" class="btn btn-secondary" onclick="myFunction1()">Photograph re-product</button>
+    <button id="nowBtn" class="btn btn-secondary" onclick="myFunction1()">Writing</button>
+
+    <h3>My Languages</h3>
+
+    <button id="pastBtn" class="btn btn-primary" onclick="myFunction2()">Mandarin</button>
+    <button id="pastBtn" class="btn btn-primary" onclick="myFunction2()">English</button>
+
+
+
+    <h2>My Projects</h2>
+    <ul>
+        <li>
+            <a href="https://github.com/SUN08042HanYue/jour2106">README</a>
+        </li>
+        <li><a href="hw1/index.html">homework1</a></li>
+    </ul>
+
+
 </body>
+
+</html>
